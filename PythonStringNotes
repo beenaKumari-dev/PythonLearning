@@ -1,0 +1,114 @@
+String : define by single or double quote
+ex str1 = "Hello" str2 = 'hello' both are str
+multiple line string 
+str_multiline = """This is multiple line #Can also give single quote '''
+                statement string."""
+Note: the line breaks are inserted at the same position as in the code.
+
+String in Array: each char of str can we presented as array elements ex a = "Hello, World!"
+print(a[1]) # output e
+
+Looping Through a String : Using for loop for x in "banana":  print(x) #output each char in next line 
+
+String Length : len() method is used to get string length ex len("banana") #output 6
+
+Check String: To check whether any char or word is present in the string or not(IN keyword)
+Ex txt = "The best things in life are free!"
+print("free" in txt) #output True
+OR using if statement if "free" in txt: print("Present") #output Present
+
+Check if NOT: (NOT IN Keyword)
+Ex txt = "The best things in life are free!"
+print("free" not in  txt) #output False
+print("word" not in  txt) #output True
+
+Slicing Strings:to return a range of characters i.e []
+b = "Hello, World!"
+print(b[2:5]) # from index 2 to 5
+print(b[:5]) #from index 0 to 5 ,print(b[2:]) #from index 2 to last
+Negative Indexing:start the slice from the end of the string, start with -1 , ex print(b[-5:-2]) 
+
+Modify Strings : diff methods are used to mpdify string
+a.lower() or a.upper() will convert str into lowercase,uppercase
+a.strip() remove whitespaces,a.replace("value to be replaced", "value to be replace with")
+a.split("seperator") ie a = "Hello, World!" 
+print(a.split(",")) # returns ['Hello', ' World!'] 
+
+String Concatenation : Merge two string using + plus
+
+Format Strings or f String : we cannot combine strings and numbers so we combine strings and numbers by using f-strings or the format() method! ex.  age = 36
+txt = f"My name is John, I am {age}"
+print(txt) # print f"My name is John, I am 36
+Placeholders and Modifiers({value:modifier}) : A placeholder can contain variables, operations, functions, and modifiers to format the value.A placeholder can contain Python code, like math operations {20 * 59} : ex price = 59
+txt = f"The price is {price:.2f} dollars"
+print(txt) #return The price is 59.00 dollars
+
+Escape Characters : To insert characters that are illegal in a string, use an escape character.
+\' - add quotes, \\ adds backslash, \n newline, \t tab \b backspace ex txt = "Hello \bWorld!" print(txt) #output Hello World i.e example erases one character, \r the cursor or print head back to the beginning of the current line ex txt = "Hello\rWorld!" print(txt) #op World!
+
+String Methods:All string methods return new values. They do not change the original string.
+capitalize()	Converts the first character to upper case: string.capitalize()
+casefold()	Converts string into lower case:string.casefold()
+center()	Returns a centered string:string.center(length, character(optional)
+ex txt = "banana" x = txt.center(20, "O") print(x) #output OOOOOOObananaOOOOOOO
+count()	Returns the number of times a specified value occurs in a string :string.count(value, start(optional default 0), end(optional default end))
+encode()	Returns an encoded version of the string#string.encode(encoding=encoding(optional), errors=errors(optional)) txt.encode()
+endswith()	Returns true if the string ends with the specified value# string.endswith(value, start(optional default 0), end(optional end))
+Check if the string ends with either the phrase "world." or "castle.":x = txt.endswith(("first checklist.", "second checklist."))
+expandtabs()	Sets the tab size of the string #string.expandtabs(tabsize(optional default is 8) #txt = "H\te\tl\tl\to"x= txt.expandtabs(2)
+find()	Searches the string for a specified value and returns the position of where it was found # string.find(value, start(optional default 0), end(optional end))
+return -1 if value is not found. index() method raises exception if value not found
+index()	Searches the string for a specified value and returns the position of where it was found#string.index(value, start, end)
+isalnum()	Returns True if all characters in the string are alphanumeric :string.isalnum()
+isalpha()	Returns True if all characters in the string are in the alphabet :string.isalpha()
+isascii()	Returns True if all characters in the string are ascii characters : string.isascii()
+isdecimal()	Returns True if all characters in the string are decimals
+isdigit()	Returns True if all characters in the string are digits
+isidentifier()	Returns True if the string is an identifier means varibale name is correct
+islower()	Returns True if all characters in the string are lower case
+isnumeric()	Returns True if all characters in the string are numeric
+isprintable()	Returns True if all characters in the string are printable
+isspace()	Returns True if all characters in the string are whitespaces
+istitle()	Returns True if the string follows the rules of a title ie first char capital
+isupper()	Returns True if all characters in the string are upper case
+join()	Converts the elements of an iterable into a string #string.join(iterable) ex myTuple = ("John","Peter","Vicky") x= "#".join(myTuple)
+ljust()	Returns a left justified version of the string ; string.ljust(length, character(optional default space)
+ex txt = "banana" x = txt.ljust(20) 
+print(x, "is my favorite fruit.") #output banana              is my favorite fruit.
+lower()	Converts a string into lower case
+lstrip()	Returns a left trim version of the string #string.lstrip(characters(optional a set of char to be strip or remove))
+maketrans()	Returns a translation table to be used in translations #str.maketrans(x, y(optional), z(optional ,value to be removed)
+txt = "Hi Sam!"
+x = "mSa"
+y = "eJo"
+mytable = str.maketrans(x, y)
+print(txt.translate(mytable)) #output Hi Joe!
+txt = "Good night Sam!"
+x = "mSa"
+y = "eJo"
+z = "odnght"
+mytable = str.maketrans(x, y, z)
+print(txt.translate(mytable)) #output G i Joe!
+partition()	Returns a tuple where the string is parted into three parts #string.partition(value)
+replace()	Returns a string where a specified value is replaced with a specified value
+rfind()	Searches the string for a specified value and returns last position of where it was found #str1.rfind(value,start(opt), end(opt))
+rindex()	Searches the string for a specified value and returns the last position of where it was found #string.rindex(value, start, end)
+rjust()	Returns a right justified version of the string
+rpartition()	Returns a tuple where the string is parted into three parts from right
+rsplit()	Splits the string at the specified separator, and returns a list
+rstrip()	Returns a right trim version of the string
+split()	Splits the string at the specified separator, and returns a list
+splitlines()	Splits the string at line breaks and returns a list
+startswith()	Returns true if the string starts with the specified value
+strip()	Returns a trimmed version of the string
+swapcase()	Swaps cases, lower case becomes upper case and vice versa
+title()	Converts the first character of each word to upper case
+translate()	Returns a translated string
+upper()	Converts a string into upper case
+zfill()	Fills the string with a specified number of 0 values at the beginning #string.zfill(len)
+txt = "50"
+x = txt.zfill(10)
+print(x) #output  0000000050
+
+format()	Formats specified values in a string
+format_map()	Formats specified values in a string

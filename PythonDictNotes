@@ -1,0 +1,112 @@
+Python Dictionaries
+
+Dictionaries are used to store data values in key:value pairs.A dictionary is a collection which is ordered*, changeable and do not allow duplicates.can be referred to by using the key name
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+Access Values: Using key name i.e print(thisdict["brand"])
+
+length : len(thisdict)
+Data Types :The values in dictionary items can be of any data type. thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+
+type(thisdict) #o/p <class,dict>
+The dict() Constructor : It is also possible to use the dict() constructor to make a dictionary.
+thisdict = dict(name = "John", age = 36, country = "Norway")
+
+Access Items : Using key ie. print(thisdict["brand"])
+Using get method : x = thisdict.get("brand")
+Get Keys : The keys() method will return a list of all the keys in the dictionary.
+x = thisdict.keys()
+The list of the keys is a view of the dictionary, meaning that any changes done to the dictionary will be reflected in the keys list.
+car = {"brand": "Ford",
+"model": "Mustang",
+"year": 1964}
+x = car.keys()
+print(x) #before the change
+car["color"] = "white"
+print(x) #after the change #o/p dict_keys(['brand', 'model', 'year'])
+dict_keys(['brand', 'model', 'year', 'color'])
+Get Values:The values() method will return a list of all the values in the dictionary. 
+x = thisdict.values() 
+The list of the values is a view of the dictionary, meaning that any changes done to the dictionary will be reflected in the values list.
+Get Items : The items() method will return each item in a dictionary, as tuples in a list.
+x = thisdict.items() #dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+The returned list is a view of the items of the dictionary, meaning that any changes done to the dictionary will be reflected in the items list.
+
+Check if Key Exists :if "model" in thisdict
+
+Change Dictionary Items :referring to its key name #thisdict["year"] = 2018
+
+Update Dictionary :thisdict.update({"year": 2020})
+
+Add Dictionary Items : Adding an item to the dict is done by using a new index key and assigning a value to it
+thisdict["color"] = "red"
+thisdict.update({"color": "red"})
+
+Remove Dictionary Items : Different ways are listed below
+The pop() method : thisdict.pop("model")
+popitem() : method removes the last inserted item thisdict.popitem()
+del keyword : del thisdict["model"], del thisdict :deletes full dict ,thisdict.clear() empties the dict
+
+Loop Dictionaries : 
+for x in thisdict: 
+    print(x) this will print key one by one
+    print thisdict[x] : this will print values one by one
+other ways of getting values:
+for x in thisdict.values():  
+    print(x) same goes for key for x in thisdict.keys()
+
+both keys and values, by using the items() method
+for x, y in thisdict.items():
+  print(x, y)
+
+setdefault:Returns the value of the specified key. If the key does not exist: insert the key, with the specified value #dictionary.setdefault(keyname, value)
+
+fromkeys(): Returns a dictionary with the specified keys and value
+dict.fromkeys(keys, value(optional default None))
+  
+Copy Dictionaries:
+mydict = thisdict.copy(), mydict = dict(thisdict)
+
+Nested Dictionaries: dict inside dict
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+Access Items in Nested Dictionaries: you use the name of the dictionaries, starting with the outer dictionary
+print(myfamily["child2"]["name"])
+
+Loop Through Nested Dictionaries:
+the items() method:
+  for x, obj in myfamily.items():
+  print(x) #child
+
+  for y in obj:
+    print(y + ':', obj[y]) #name:linus, year:2011 and so on
