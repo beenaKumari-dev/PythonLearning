@@ -1,0 +1,102 @@
+Scope: A variable is only available from inside the region it is created. This is called scope.
+Global Keyword : If need to create a global variable, but are stuck in the local scope, you can use the global keyword.The global keyword makes the variable global.
+Nonlocal Keyword:The nonlocal keyword is used to work with variables inside nested functions.
+
+Python Modules:its same as python code library.A file containing a set of functions you want to include in your application
+def greeting(name):
+  print("Hello, " + name) #save this as modulename.py
+ 
+calling the module by import func
+import modulename
+modulename.greeting('Beena')
+ When using a function from a module, use the syntax: module_name.function_name.
+Variables in Module
+person1 = { "name": "John","age": 36,"country": "Norway"}
+print(modulename.person1[name
+Re-naming a Module : using as keyword
+import modulename as mn
+print(m.person1[name])
+Built-in Modules:The dir() function can be used on all modules, also the ones you create yourself.
+
+Import From Module : You can choose to import only parts from a module, by using the from keyword
+from modulename import person1 as p1
+print(p1[name])
+
+Python Datetime: date in Python is not a data type of its own, but we can import a module named datetime to work with dates as date objects.
+import datetime
+x = datetime.datetime.now()
+print(x)
+print(x.year)
+print(x.strftime("%A"))#will give weekday full name
+Creating Date Objects:To create a date, we can use the datetime() class (constructor) of the datetime module.The datetime() class requires three parameters to create a date: year, month, day.
+import datetime
+x = datetime.datetime(2020, 5, 17)
+print(x)
+
+The strftime() Method:The datetime object has a method for formatting date objects into readable strings.
+
+Python Math:perform mathematical tasks on numbers
+Built-in Math Functions: min,max,abs,sqrt,pow,ceil,floor,pi
+
+Python JSON:SON is a syntax for storing and exchanging data.JSON is text, written with JavaScript object notation.
+import json
+json.loads(): If you have a JSON string and the result will be a Python dictionary.
+Convert from JSON to Python
+x =  '{ "name":"John", "age":30, "city":"New York"}'
+y = json.loads(x)
+print(y["age"])
+Convert from Python to JSON :json.dumps()
+# a Python object (dict):
+x = {  "name": "John",  "age": 30,  "city": "New York"}
+# convert into JSON:
+y = json.dumps(x)
+# the result is a JSON string:
+print(y)
+
+Format the Result:
+Use the indent parameter to define the numbers of indents: 
+json.dumps(x, indent=4)
+y = json.dumps(x, indent=4, sort_keys=True)
+
+
+Python PIP:IP is a package manager for Python packages, or modules .
+pip install package_name
+pip uninstall package_name
+List installed packages: pip list
+
+User Input:
+name = input('Enter your name:')
+print(f"Hello {name}")
+
+Python Try Except:
+The try block lets you test a block of code for errors.
+The except block lets you handle the error.
+The else block lets you execute code when there is no error.
+The finally block lets you execute code, regardless of the result of the try- and except blocks.
+try:
+  print(x)
+except:
+  print("An exception occurred")
+else:
+  print('handle try')
+
+Raise an exception:Python developer you can choose to throw an exception if a condition occurs.To throw (or raise) an exception, use the raise keyword.
+x = -1
+if x < 0:
+  raise Exception("Sorry, no numbers below zero")
+  
+Python Virtual Environment:A virtual environment in Python is an isolated environment on your computer, where you can run and test your Python projects.It allows you to manage project-specific dependencies without interfering with other projects or the original Python installation.
+Creating a Virtual Environment
+Python has the built-in venv module for creating virtual environments.
+Steps:navigate to the folder where you want to create your project, then type this command 
+python -m venv myfirstproject
+Activate Virtual Environment:use the virtual environment, you have to activate it with this command
+>myfirstproject\Scripts\activate
+
+Install Packages:pip install cowsay
+
+Deactivate Virtual Environment
+To deactivate the virtual environment use this command:> deactivate
+
+Delete Virtual Environment:> rmdir /s /q myfirstproject
+ 

@@ -1,0 +1,108 @@
+Python Notes for Interview Preparations:
+
+Python comments 
+single line : #
+multiline : '''
+            '''
+Casting : specify the data type of a variabl
+Get the type: type()
+
+
+Variable Names:
+Camel Case : except first, all start with Captial letter eg myFirstVariable
+Snake Case : Name seperated by underscore(_) eg my_first_variable
+Pascal Case : Each word starts with capital MyFirstVariable
+
+Global Variables : Can we access throught the program and needs to be created outside of a function
+The global Keyword : create a global variable inside a function, you can use the global keyword
+ex def myfunc():
+  global x
+  x = "fantastic"
+myfunc()
+print("Python is " + x) #output Python is Fantastic
+
+Type Conversion: performed explicitly by the programmer using built-in functions
+method to convert  one  data type to another. ex int to float/complex, float to int/complex
+y = int(2.8) # output 2, x = float(1) # 1.0 z = complex(1) #1+0j z = complex(1.9) #1.9 + 0j
+note : You cannot convert complex numbers into another number type.
+
+Type Casting:happens automatically by the Python interpreter
+num_int = 123
+num_float = 1.23
+num_new = num_int + num_float #num_int is implicitly converted to float
+print("Data type of num_new:",type(num_new)) # Output: <class 'float'>
+
+--------------------------------------------------------------------------------------------------------
+
+Python Data Types:
+
+Number : int(1),float(1.2), complex(1j)
+Int : Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length
+Float : Float, or "floating point number" is a number, positive or negative, containing one or more decimals.Float can also be scientific numbers with an "e" to indicate the power of 10. ex 12E4 will be 12*10^4 = 12*10000=120000
+Complex : Complex numbers are written with a "j" as the imaginary part ex x = 3+5j
+
+
+Python Booleans: Booleans represent one of two values: True or False.
+Python also has many built-in functions that return a boolean value, like the isinstance() function, which can be used to determine if an object is of a certain data type:
+x = 200
+print(isinstance(x, int)) #output true
+
+Python Operators
+1. Arithmetic Operators :Arithmetic operators are used with numeric values to perform common mathematical operations
+   plus + ,print(1+5)#output 6,minus -,print(5-3) #output 3,* multiple print(5*3) #output 15
+   division / print(12/5) output 2.4,
+   % modulus ie reminder print(12/5) #output 2,
+   ** Exponentiation means power x, y = 2, 5 print(x ** y) #output 32(2*2*2*2*2),
+   // floor division ##the floor division // rounds the result down to the nearest whole number
+   x,y = 15,2 print(x // y) #output 7
+
+2. Assignment Operators :Assignment operators are used to assign values to variables
+  =#x=5,+= #x = x+5,-= #x = x-5,*= #x = x*5,/= #x = x/5,%=,//= #x = x//5,**= #x = x**5,&= #x = x&5, |= #x = x&5, ^=#x = x^5,>>=,:=
+  
+3. Comparison Operators :Comparison operators are used to compare two values
+   ==,!=,>=,>,<,<=
+
+4. Logical Operators :Logical operators are used to combine conditional statements
+ and(&&) both true, or(||) 1 true, not:Reverse the result, returns False if the result is true not(x < 5 and x < 10)
+
+5. Identity Operators :Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location
+      is :Returns True if both variables are the same object	x is y	
+      x = ["apple", "banana"] y = ["apple", "banana"] z = x
+      print(x is z)# returns True because z is the same object as x
+      print(x is y) # returns False because x is not the same object as y, even if they have the same content
+      print(x == y)# to demonstrate the difference betweeen "is" and "==": this comparison returns True because x is equal to y
+      is not	Returns True if both variables are not the same object	x is not y
+
+6. Membership Operators: Membership operators are used to test if a sequence is presented in an object. in and not in
+
+7. Bitwise Operators: Bitwise operators are used to compare (binary) numbers
+    & and,| or,<< Zero fill left shift,>> Signed right shift,~ not,^ xor
+    
+    
+Python Collections (Arrays)
+There are four collection data types in the Python programming language:
+
+List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
